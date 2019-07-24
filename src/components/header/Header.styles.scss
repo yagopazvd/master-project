@@ -4,15 +4,23 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-  
+    border-bottom: 1px solid grey;
+
     .logo-container {
+      display: flex;
+      align-items: center;  
       height: 100%;
-      width: 70px;
-      padding: 10px 25px 25px 0px;
+      width: 100px;
+      padding-left:15px;
+      justify-content: space-between;
 
       .logo {
-          width: 70%;
-          height: 70%;
+          color: tomato;
+          font-size: 30px
+      }
+
+      .logo-title {
+        font-family: 'Coda', cursive;
       }
     }
   
@@ -25,6 +33,9 @@
   
       .option {
         padding: 10px 15px;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
       }
     }
   }
