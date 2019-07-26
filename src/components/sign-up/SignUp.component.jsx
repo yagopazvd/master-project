@@ -5,26 +5,25 @@ import { auth, createUserProfileDocument  } from '../../firebase/firebase.utils'
 
 import './SignUp.styles.scss';
 
-class SignUP extends Component {
+class SignUp extends Component {
 
     state = { 
         displayName: '',
         email: '',
         password: '',
-        confirmPassword: '',
+        confirmPassword: '', 
     }
 
     handleSubmit = async e => {
         e.preventDefault();
         const {displayName, email, password, confirmPassword} = this.state;
 
-        if(password !== confirmPassword){
+        if (password !== confirmPassword) {
             alert("passwords dont match");
             return;
         }
 
-
-        try{
+        try {
 
             const { user } = await auth.createUserWithEmailAndPassword( email, password );
 
@@ -99,4 +98,4 @@ class SignUP extends Component {
     }
 }
  
-export default SignUP;
+export default SignUp;
