@@ -1,8 +1,9 @@
 import {userActionTypes} from './cart.types'
-
+import { addItemToCart } from './cart.utils'
 
 const INITIAL_STATE = {
-    isHidden: true
+    notHidden: false,
+    cartItems: []
 }
 
 
@@ -11,8 +12,14 @@ const userReducer = (state = INITIAL_STATE, action) => {
         case userActionTypes.TOGGLE_CART_HIDDEN:
             return {
                 ...state,
-                isHidden: !state.isHidden
-            }
+                notHidden: !state.notHidden
+            };
+        
+        case userActionTypes.ADD_ITEM:
+            return {
+                ...state,
+                cartItems: addItemToCart(state.cartItems, action.payload)
+            };
 
 
         default:
