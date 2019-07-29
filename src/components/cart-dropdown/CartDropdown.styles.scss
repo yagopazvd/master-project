@@ -17,8 +17,15 @@
       flex-direction: column;
       overflow: auto;
     }
-  
-    button {
-      margin-top: auto;
+
+    .link{
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+
+        button {
+            margin-top: auto;
+          }
     }
+  
   }
